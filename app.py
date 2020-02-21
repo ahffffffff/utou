@@ -4,7 +4,7 @@ import json
 import random
 import re
 
-SIGN = "mvaPcfjdYuejfndk182K"
+SIGN = "123"
 
 ALLURL = []
 
