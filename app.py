@@ -25,7 +25,7 @@ def del_url():
     check()
     sign = request.args.get("sign")
     if sign != SIGN:
-        return abort()
+        return abort(401)
 
     url = request.args.get("url")
     if url in ALLURL:
@@ -39,7 +39,7 @@ def add_url():
     check()
     sign = request.args.get("sign")
     if sign != SIGN:
-        return abort()
+        return abort(401)
 
     url = request.args.get("url")
     if url in ALLURL:
@@ -56,7 +56,7 @@ def showall():
     check()
     sign = request.args.get("sign")
     if sign != SIGN:
-        return abort()
+        return abort(401)
     return json.dumps(ALLURL)
 
 def check():
